@@ -5,7 +5,7 @@
 
 ### Overview
 - [Features](#features)
-- [Prerequisites] (#prerequisites)
+- [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Getting ready](#getting-ready)
 - [options](#options)
@@ -21,7 +21,7 @@
 - Bootstrap5
 
 
-## Prerequisites
+### Prerequisites
 
 - Docker
 - Docker Compose
