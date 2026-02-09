@@ -34,10 +34,12 @@ git clone https://github.com/momeneh/Django-TodoApp.git
 
 ### Getting ready
 ```bash
-docker-compose up --build
+cd Django-TodoApp 
+docker-compose up --build -d
 ```
 
 ```bash
+docker-compose exec web python manage.py makemigrations
 docker-compose exec web python manage.py migrate
 ```
 
