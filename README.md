@@ -36,19 +36,7 @@ git clone https://github.com/momeneh/Django-TodoApp.git
 ```bash
 docker-compose up --build
 ```
-Make sure to install the dependencies of the project through the requirements.txt file.
-```bash
-docker-compose exec web  pip install -r requirements.txt
-```
 
-
-```bash
-docker-compose exec web python manage.py makemigrations
-```
-
-This will create all the migrations file (database migrations) required to run this App.
-
-Now, to apply this migrations run the following command
 ```bash
 docker-compose exec web python manage.py migrate
 ```

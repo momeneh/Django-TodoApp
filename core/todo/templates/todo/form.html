@@ -1,0 +1,9 @@
+<div class="add-items d-flex">
+    <form class="w-100 d-flex" method="POST" action="{{custom_action}}">
+        {% csrf_token %}
+        <input type="text" class="form-control todo-list-input" name="title" placeholder="What do you need to do?" value="{{form.title.value}}">
+        <button class="add btn btn-primary font-weight-bold todo-list-add-btn">save</button>
+
+    </form> 
+</div>      
+

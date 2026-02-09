@@ -1,0 +1,72 @@
+{% extends 'baseApp.html' %}
+{% load static %}
+
+{% block title %} Todo List {% endblock %}
+{% block extra_css %}{% endblock %}
+
+{% block content %}
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header"> 
+                        <div class="d-flex flex-row">
+                            <div class="w-100">{{ request.user.username }}</div>
+                                <form action="{% url 'account:logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn p-0" ><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h4 class="card-title">Awesome Todo list</h4>
+
+                        {% if not custom_action %}
+                            {% url 'todo:task-create' as custom_action %}
+                        {% endif %}    
+
+                        {% include "todo/form.html" with  custom_action=custom_action csrf_token=csrf_token form=form%}
+                        
+                        <div class="list-wrapper">
+                            <ul class="d-flex flex-column-reverse todo-list">
+                                {% for task in tasks %}
+                                    <li {% if task.done == True %}class="completed" {%endif%} >
+                                        <div class="d-flex flex-row mb-3 w-100">
+                                            <div class="form-check w-100"> 
+                                                <label class="form-check-label"> 
+                                                    
+                                                    <input class="checkbox" type="checkbox" onclick="window.location.href='{% url "todo:task-done" task.id %}'"  {% if task.done == True %} checked="" {%endif%}> 
+                                                    {{task.title}}
+                                                    <i class="input-helper"></i>
+                                                </label> 
+                                            </div> 
+
+                                            <div class="d-flex flex-row">
+                                                <!-- delete -->
+                                                <form action="{% url 'todo:task-delete' task.id %}" method="post">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn p-0" onclick="return confirm('sure?')"><i class="remove mdi mdi-close-circle-outline"></i></button>
+                                                </form>
+                                                
+                                                <!-- edit -->
+                                                <a class="text-success" href="{% url 'todo:task-edit' task.id %}"><i class=' fa fa-edit p-2 '></i> </a>
+
+                                            </div>     
+                                        </div> 
+                                    </li>
+                                 {% endfor %} 
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}{% endblock %}
