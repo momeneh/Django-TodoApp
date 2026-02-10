@@ -5,6 +5,7 @@ psycopg[binary]>=3.1.19
 python-dotenv>=1.0.0
 django-bootstrap5>=23.0
 djangorestframework
+djangorestframework-simplejwt
 
 #third parties
 markdown    
