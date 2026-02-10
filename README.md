@@ -5,6 +5,7 @@
 
 ### Overview
 - [Features](#features)
+- [Demo](#demo)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Getting ready](#getting-ready)
@@ -21,9 +22,20 @@
 - Bootstrap5
 
 ### Demo
-This is a brief demo of the functionality of the project
+This is a brief demo of the functionality of the project 
 <p align="center">
-<img src="https://github.com/momeneh/Django-TodoApp/blob/api/demo/toDoWeb.gif" alt="toDoWeb" width="720"/>
+<img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoWeb.gif" alt="toDoWeb" width="720"/>
+</p>
+
+
+This is a brief demo of the functionality of the project swagger
+<p align="center">
+<img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoSwagger.gif" alt="toDoWeb" width="720"/>
+</p>
+
+This is a brief demo of the functionality of the project rest framework web api
+<p align="center">
+<img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoRestWebApi.gif" alt="toDoWeb" width="720"/>
 </p>
 
 ### Prerequisites
