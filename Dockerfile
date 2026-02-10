@@ -4,18 +4,14 @@ FROM python:3.13
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+# Create the app directory
+RUN mkdir /app
+
 # Set work directory
 WORKDIR /app
 
-# Install pip 24.3.1
-RUN pip install --upgrade pip==24.3.1
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    default-libmysqlclient-dev \
-    pkg-config \
-    && rm -rf /var/lib/apt/lists/*
+# Install pip 
+RUN pip install --upgrade pip
 
 # Copy requirements file
 COPY requirements.txt /app/
