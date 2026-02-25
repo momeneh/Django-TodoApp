@@ -14,3 +14,7 @@ drf-yasg[validation]
 
 #email
 premailer
+
+#refactoring and test
+black
+flake8

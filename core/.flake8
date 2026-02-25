@@ -1,0 +1,19 @@
+[flake8]
+
+exclude =
+    .tox,
+    .git,
+    *staticfiles*,
+    locale,
+    docs,
+    tools,
+    venv,
+    *migrations*,
+    *.pyc,
+    .git,
+    __pycache__,
+    test_*.py
+    test*.py
+    settintgs
+
+ignore =E501,F405,F403

@@ -1,6 +1,7 @@
 import threading
 from time import sleep
 
+
 class EmailThread(threading.Thread):
     def __init__(self, email_obj):
         threading.Thread.__init__(self)
