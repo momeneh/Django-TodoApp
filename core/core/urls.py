@@ -22,7 +22,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path('accounts/',include('account.urls')),
+   path('account/',include('account.urls')),
    path('', RedirectView.as_view(pattern_name="todo:task-list"),name="RedirectTodo"),
    path('todo/', include('todo.urls')),
 

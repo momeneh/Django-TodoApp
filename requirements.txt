@@ -11,3 +11,6 @@ djangorestframework-simplejwt
 markdown    
 django-filter
 drf-yasg[validation]
+
+#email
+premailer
