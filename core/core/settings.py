@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "django_filters",
     "drf_yasg",
     "todo",
-    "account",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -89,7 +89,9 @@ DATABASES = {
     }
 }
 # user maneger config
-AUTH_USER_MODEL = "account.user"
+AUTH_USER_MODEL = "accounts.user"
+
+
 
 
 # Password validation

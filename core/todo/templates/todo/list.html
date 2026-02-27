@@ -12,8 +12,8 @@
                 <div class="card ">
                     <div class="card-header"> 
                         <div class="d-flex flex-row">
-                            <div class="w-100">{{ request.user.username }}</div>
-                                <form action="{% url 'account:logout' %}" method="post">
+                            <div class="w-100">{{ request.user.email }}</div>
+                                <form action="{% url 'accounts:logout' %}" method="post">
                                     {% csrf_token %}
                                     <button type="submit" class="btn p-0" ><i class="fa fa-sign-out" aria-hidden="true"></i></button>
                                 </form>

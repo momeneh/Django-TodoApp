@@ -186,7 +186,7 @@ class ResetPasswordView(generics.GenericAPIView):
 
         token = get_tokens_for_user(user)
         reset_path = reverse(
-            "account:api-v1:reset-password-confirm", kwargs={"token": token}
+            "accounts:api-v1:reset-password-confirm", kwargs={"token": token}
         )
         reset_url = request.build_absolute_uri(reset_path)
 
