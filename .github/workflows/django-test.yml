@@ -16,5 +16,5 @@ jobs:
     - name: set up docker compose  
       run: docker compose up -d
     - name: Run tests
-      run: docker exec web sh -c "flake8 ." 
+      run: docker exec django_app sh -c "flake8 ." 
    
