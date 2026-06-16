@@ -15,7 +15,7 @@
                             <div class="w-100">{{ request.user.email }}</div>
                                 <form action="{% url 'accounts:logout' %}" method="post">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn p-0" ><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                                    <button type="submit" class="btn p-0" title="logout"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
                                 </form>
                             </div>
                     </div>
@@ -37,7 +37,7 @@
                                             <div class="form-check w-100"> 
                                                 <label class="form-check-label"> 
                                                     
-                                                    <input class="checkbox" type="checkbox" onclick="window.location.href='{% url "todo:task-done" task.id %}'"  {% if task.done == True %} checked="" {%endif%}> 
+                                                    <input class="checkbox" type="checkbox"  onclick="window.location.href='{% url "todo:task-done" task.id %}'"  {% if task.done == True %} checked="" {%endif%}> 
                                                     {{task.title}}
                                                     <i class="input-helper"></i>
                                                 </label> 
@@ -47,11 +47,11 @@
                                                 <!-- delete -->
                                                 <form action="{% url 'todo:task-delete' task.id %}" method="post">
                                                     {% csrf_token %}
-                                                    <button type="submit" class="btn p-0" onclick="return confirm('sure?')"><i class="remove mdi mdi-close-circle-outline"></i></button>
+                                                    <button type="submit" class="btn p-0" onclick="return confirm('want to delete ! sure?')" title="delete"><i class="remove mdi mdi-close-circle-outline"></i></button>
                                                 </form>
                                                 
                                                 <!-- edit -->
-                                                <a class="text-success" href="{% url 'todo:task-edit' task.id %}"><i class=' fa fa-edit p-2 '></i> </a>
+                                                <a class="text-success" href="{% url 'todo:task-edit' task.id %}" title="edit"><i class=' fa fa-edit p-2 '>edit</i> </a>
 
                                             </div>     
                                         </div> 

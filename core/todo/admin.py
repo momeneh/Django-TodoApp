@@ -4,7 +4,7 @@ from .models import Task
 
 class TaskAdmin(admin.ModelAdmin):
     model = Task
-    list_display = ('user','title','done')
+    list_display = ("user", "title", "done")
 
 
-admin.site.register(Task,TaskAdmin)
+admin.site.register(Task, TaskAdmin)

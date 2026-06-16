@@ -64,8 +64,9 @@ docker-compose exec web python manage.py migrate
 Project it self has the user creation form but still in order to use the admin you need to create a super user.you can use the createsuperuser option to make a super user.
 ```bash
 docker-compose exec web python manage.py createsuperuser
+docker-compose exec web pip install flake8                                                              
+docker-compose exec web sh -c "flake8"   
 ```
-
 
 
 Once the server is up and running, head over to http://127.0.0.1:8000 for the App.

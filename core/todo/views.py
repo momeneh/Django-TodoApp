@@ -7,6 +7,7 @@ from django.urls import reverse_lazy, reverse
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 
+
 class TaskListView(LoginRequiredMixin, ListView):
     model = Task
     template_name = "todo/list.html"

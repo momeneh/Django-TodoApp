@@ -53,7 +53,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
 
     # verified email just checked in APIs not in forms and logins
-    # TODO: can be done with permission classes
+    # TODO: should be fixed after the internet is ok
     is_verified = models.BooleanField(default=False)
 
     USERNAME_FIELD = "email"
