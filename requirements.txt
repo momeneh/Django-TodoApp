@@ -21,3 +21,6 @@ flake8
 pytest  
 pytest-django
 Faker
+
+#deployment module
+gunicorn

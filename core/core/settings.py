@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-@o)@y1-kkl9mp@7+t$&fvxyx=gt4)*=fm^n#v366rjj0^h_^&c"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost 127.0.0.1 [::1]").split()
 
@@ -126,8 +126,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
 
+STATIC_ROOT = BASE_DIR / "static"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
+STATICFILES_DIRS = [
+    BASE_DIR / "staticfiles",
+]
 # rest framework setting
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [

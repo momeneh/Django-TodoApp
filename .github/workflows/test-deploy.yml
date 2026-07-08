@@ -1,0 +1,40 @@
+name: Django project test
+on:
+  push:
+    branches: [ "api" ]
+  pull_request:
+    branches: [ "api" ]
+
+jobs:
+
+  Test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: set up docker compose  
+      run: docker compose up -d
+    - name: Run tests
+      run: docker exec django_app sh -c "flake8 && pytest ." 
+   
+  #secrets should be described in github/repo/setting/secrets/action
+  # Deploy:
+  #   if: ${{ always() && contains(join(needs.*.result,','), 'success') }}
+  #   name: Deploy
+  #   needs: Test
+  #   runs-on: ubuntu-latest
+  #   steps: 
+  #   - uses: actions/checkout@v4
+  #   - name: Connect and Execute commands
+  #     uses: appleboy/ssh-action@master
+  #     with: 
+  #       username: ${{secrets.USERNAME}}
+  #       password: ${{secrets.PASSWORD}}
+  #       host: ${{secrets.HOST}}
+  #       port:  ${{secrets.PORT}}
+  #       scrip: |
+  #         cd ${{secrets.project_PATH}}
+  #         docker compose -f docker-compose-stage.yml stop
+  #         git pull
+  #         docker-compose -f docker-compose-stage.yml restart
