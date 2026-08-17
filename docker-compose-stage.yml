@@ -18,12 +18,6 @@ services:
     environment:
       - SECRET_KEY=${SECRET_KEY:-django-insecure-change-this-in-production}
       - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1,0.0.0.0}
-      - DB_ENGINE=${DB_ENGINE:-mysql}
-      - DB_NAME=${DB_NAME:-django_db}
-      - DB_USER=${DB_USER:-django_user}
-      - DB_PASSWORD=${DB_PASSWORD:-django_password}
-      - DB_HOST=${DB_HOST:-db}
-      - DB_PORT=${DB_PORT:-3306}
     restart: always
 
   nginx:
