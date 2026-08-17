@@ -25,12 +25,9 @@ jobs:
     needs: Test
     runs-on: ubuntu-latest
     steps: 
-    - name: Run tests
-      run: docker exec django_app sh -c "flake8 && pytest ." 
-
-    # - uses: actions/checkout@v4
-    # - name: Connect and Execute commands
-    #   uses: appleboy/ssh-action@master
+    - uses: actions/checkout@v4
+    - name: Connect and Execute commands
+      uses: appleboy/ssh-action@master
     #   with: 
     #     username: ${{secrets.USERNAME}}
     #     password: ${{secrets.PASSWORD}}
