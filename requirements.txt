@@ -22,3 +22,6 @@ Faker
 
 #deployment module
 gunicorn
+
+#deployment needed in render.com
+whitenoise
