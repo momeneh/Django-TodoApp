@@ -22,6 +22,7 @@
 - Bootstrap5
 
 ### Demo
+This project is deployed in https://django-todoapp-vh84.onrender.com/. Please be patient until the app is loaded.
 This is a brief demo of the functionality of the project 
 <p align="center">
 <img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoWeb.gif" alt="toDoWeb" width="720"/>
