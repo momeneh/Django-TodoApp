@@ -373,7 +373,7 @@ Backend technologies:
 
 This project is available for educational and portfolio purposes.
 
-
+---
 ### Image Demo
 This is a brief demo of the functionality of the project 
 <p align="center">
