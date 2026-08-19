@@ -124,6 +124,34 @@ The task management functionality is implemented using Django Class-Based Views 
 Authentication requirements are handled using Django authentication mixins.
 
 ---
+## 🔌 REST API
+
+The application includes a versioned REST API built with Django REST Framework.
+
+### API Features
+
+* Versioned API under `/api/v1/`
+* RESTful task management using `ModelViewSet`
+* Automatic URL routing with DRF `DefaultRouter`
+* Authentication with `IsAuthenticated`
+* Custom object-level authorization with `IsOwner`
+* User-specific querysets to isolate task data
+* `ModelSerializer` for task serialization
+* Automatic assignment of newly created tasks to the authenticated user
+
+### API Endpoint
+
+```text
+/api/v1/
+```
+
+The API supports standard REST operations for tasks, including:
+
+* `GET` — List and retrieve tasks
+* `POST` — Create a task
+* `PUT` — Update a task
+* `PATCH` — Partially update a task
+* `DELETE` — Delete a task
 
 ## 🗄️ Data Model
 
