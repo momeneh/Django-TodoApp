@@ -152,7 +152,7 @@ The API supports standard REST operations for tasks, including:
 * `PUT` — Update a task
 * `PATCH` — Partially update a task
 * `DELETE` — Delete a task
-
+---
 ## 🗄️ Data Model
 
 The main `Task` model contains information such as:
@@ -166,7 +166,47 @@ The main `Task` model contains information such as:
 The relationship between users and tasks allows each authenticated user to manage their own task list.
 
 ---
+## 🧪 Testing
 
+The project includes API tests built with **pytest** and Django REST Framework's `APIClient`.
+
+The test suite covers authentication, authorization, CRUD operations, validation, and access control for user-owned tasks.
+
+### Test Coverage
+
+* Anonymous access protection
+* Authenticated user access
+* Task creation
+* Task listing
+* Task retrieval
+* Task update
+* Task deletion
+* Invalid task IDs
+* Request validation
+* Object-level authorization
+* Preventing users from accessing or modifying other users' tasks
+
+### Testing Tools
+
+* pytest
+* Django test database
+* Django REST Framework `APIClient`
+* `pytest.mark.django_db`
+
+### Run Tests
+
+From the project root:
+
+```bash
+pytest
+```
+
+To run the API tests specifically:
+
+```bash
+pytest core/todo/api/v1/tests/
+```
+---
 ## 🐳 Docker
 
 The project includes Docker configuration for containerized development and deployment.
@@ -303,7 +343,6 @@ Potential improvements for future versions include:
 
 * Expanded REST API functionality
 * API documentation with OpenAPI/Swagger
-* Automated unit and integration tests
 * Pagination and filtering
 * Task priorities and categories
 * Due dates and reminders
