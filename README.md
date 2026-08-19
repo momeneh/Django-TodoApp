@@ -341,13 +341,11 @@ This project was developed to gain practical experience with Django backend deve
 Potential improvements for future versions include:
 
 * Expanded REST API functionality
-* API documentation with OpenAPI/Swagger
 * Pagination and filtering
 * Task priorities and categories
 * Due dates and reminders
 * Search functionality
 * Improved API authentication
-* CI/CD pipeline
 
 ---
 
