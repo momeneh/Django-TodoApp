@@ -1,9 +1,9 @@
 name: Django project test
 on:
   push:
-    branches: [ "api" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "api" ]
+    branches: [ "main" ]
 
 jobs:
 
