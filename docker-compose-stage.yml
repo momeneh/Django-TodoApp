@@ -16,7 +16,7 @@ services:
     expose:
       - "8000"
     environment:
-      - SECRET_KEY=${SECRET_KEY:-django-insecure-change-this-in-production}
+      - SECRET_KEY=${SECRET_KEY}
       - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1,0.0.0.0}
     restart: always
 
