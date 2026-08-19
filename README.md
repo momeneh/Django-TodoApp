@@ -1,28 +1,313 @@
+# Django TodoApp
 
-<h1 align="center">Django Class Based View Todo App</h1>
-<h3 align="center">A simple todo app project with class based view for learning</h3>
-<p align="center">
+A task management web application built with **Python and Django**, developed as a hands-on project to build practical experience with Django backend development.
 
-### Overview
-- [Features](#features)
-- [Demo](#demo)
-- [Prerequisites](#prerequisites)
-- [Setup](#setup)
-- [Getting ready](#getting-ready)
-- [options](#options)
+The application provides user authentication, user-specific task management, full CRUD operations, a responsive Bootstrap interface, and Docker-based development and deployment configuration.
+
+## 🚀 Live Demo
+
+**Live Application:**
+https://django-todoapp-vh84.onrender.com/
+
+## 📦 Source Code
+
+**GitHub Repository:**
+https://github.com/momeneh/Django-TodoApp
+
+---
+
+## ✨ Features
+
+* User authentication
+* User-specific task management
+* Create, read, update, and delete tasks
+* Mark tasks as completed or pending
+* Django Class-Based Views
+* Protected views using authentication mixins
+* Django ORM for database operations
+* Responsive UI with Bootstrap 5
+* Environment-based configuration
+* Docker and Docker Compose support
+* Deployment configuration for Render
+
+---
+
+## 🛠️ Technologies
+
+### Backend
+
+* Python
+* Django
+* Django REST Framework
+* Django ORM
+
+### Frontend
+
+* HTML
+* CSS
+* Bootstrap 5
+
+### DevOps & Tools
+
+* Docker
+* Docker Compose
+* Git
+* GitHub
+* Render
+
+---
+
+## 🏗️ Project Structure
+
+```text
+Django-TodoApp/
+│
+├── core/
+│   ├── todo/
+│   │   ├── migrations/
+│   │   ├── templates/
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   ├── views.py
+│   │   └── ...
+│   │
+│   ├── core/
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── ...
+│   │
+│   └── manage.py
+│
+├── Dockerfile
+├── DockerfileRender
+├── docker-compose.yml
+├── docker-compose-stage.yml
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+---
+
+## 🔐 Authentication & Authorization
+
+The application uses Django's authentication system to protect task management functionality.
+
+Authenticated users can manage their own tasks, while task queries are filtered according to the currently authenticated user.
+
+This ensures that users only interact with tasks associated with their own accounts.
+
+---
+
+## 📝 Task Management
+
+The application supports the complete task lifecycle:
+
+1. Create a task
+2. View tasks
+3. Update a task
+4. Delete a task
+5. Mark a task as completed
+6. Change a completed task back to pending
+
+The task management functionality is implemented using Django Class-Based Views such as:
+
+* `ListView`
+* `CreateView`
+* `UpdateView`
+* `DeleteView`
+
+Authentication requirements are handled using Django authentication mixins.
+
+---
+
+## 🗄️ Data Model
+
+The main `Task` model contains information such as:
+
+* Task title
+* Associated user
+* Creation date
+* Last update date
+* Completion status
+
+The relationship between users and tasks allows each authenticated user to manage their own task list.
+
+---
+
+## 🐳 Docker
+
+The project includes Docker configuration for containerized development and deployment.
+
+### Run with Docker Compose
+
+Clone the repository:
+
+```bash
+git clone https://github.com/momeneh/Django-TodoApp.git
+cd Django-TodoApp
+```
+
+Build and start the containers:
+
+```bash
+docker compose up --build
+```
+
+After the containers are running, access the application through the configured local port.
+
+To stop the containers:
+
+```bash
+docker compose down
+```
+
+---
+
+## 💻 Local Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/momeneh/Django-TodoApp.git
+cd Django-TodoApp
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it on Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+On Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file based on the provided environment configuration.
+
+Example:
+
+```env
+DEBUG=True
+SECRET_KEY=your-secret-key
+```
+
+Add the required database configuration according to your environment.
+
+### 5. Run migrations
+
+```bash
+python core/manage.py migrate
+```
+
+### 6. Create a superuser
+
+```bash
+python core/manage.py createsuperuser
+```
+
+### 7. Start the development server
+
+```bash
+python core/manage.py runserver
+```
+
+The application will be available at:
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
+## 🌐 Deployment
+
+The application has been configured for deployment on **Render**.
+
+The deployed application is available at:
+
+https://django-todoapp-vh84.onrender.com/
+
+Deployment configuration includes a dedicated Docker configuration and environment-based settings.
+
+---
+
+## 🎯 Project Goals
+
+This project was developed to gain practical experience with Django backend development and to apply concepts including:
+
+* Django project architecture
+* Models and Django ORM
+* Class-Based Views
+* Authentication and authorization
+* CRUD operations
+* Form handling
+* Database integration
+* Docker containerization
+* Environment configuration
+* Cloud deployment
+
+---
+
+## 🔮 Future Improvements
+
+Potential improvements for future versions include:
+
+* Expanded REST API functionality
+* API documentation with OpenAPI/Swagger
+* Automated unit and integration tests
+* Pagination and filtering
+* Task priorities and categories
+* Due dates and reminders
+* Search functionality
+* Improved API authentication
+* CI/CD pipeline
+
+---
+
+## 👩‍💻 Author
+
+**Momeneh Jafari**
+
+Senior Backend Developer
+
+Backend technologies:
+
+`PHP` · `Laravel` · `Python` · `Django` · `REST APIs` · `MySQL` · `Docker`
+
+### Connect
+
+* GitHub: https://github.com/momeneh
+* LinkedIn: https://www.linkedin.com/in/momeneh-jafari-7a177a84/
+
+---
+
+## 📄 License
+
+This project is available for educational and portfolio purposes.
 
 
-
-### Features
-- Django LTS
-- Class Based 
-- User authentication
-- Black
-- Responsive Design
-- Bootstrap5
-
-### Demo
-This project is deployed in https://django-todoapp-vh84.onrender.com/. Please be patient until the app is loaded.
+### Image Demo
 This is a brief demo of the functionality of the project 
 <p align="center">
 <img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoWeb.gif" alt="toDoWeb" width="720"/>
@@ -39,37 +324,6 @@ This is a brief demo of the functionality of the project rest framework web api
 <img src="https://github.com/momeneh/Django-TodoApp/blob/b21a5cc9dc3138e9aa4c3e2caab512074e258209/demo/toDoRestWebApi.gif" alt="toDoWeb" width="720"/>
 </p>
 
-### Prerequisites
 
-- Docker
-- Docker Compose
-
-### Setup
-To get this repository, run the following command inside your git enabled terminal
-```bash
-git clone https://github.com/momeneh/Django-TodoApp.git
-```
-
-### Getting ready
-```bash
-cd Django-TodoApp 
-docker-compose up --build -d
-```
-
-```bash
-docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate
-```
-
-### options
-Project it self has the user creation form but still in order to use the admin you need to create a super user.you can use the createsuperuser option to make a super user.
-```bash
-docker-compose exec web python manage.py createsuperuser
-docker-compose exec web pip install flake8                                                              
-docker-compose exec web sh -c "flake8"   
-```
-
-
-Once the server is up and running, head over to http://127.0.0.1:8000 for the App.
 
 
