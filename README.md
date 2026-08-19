@@ -87,7 +87,7 @@ Django-TodoApp/
 ├── docker-compose.yml
 ├── docker-compose-stage.yml
 ├── requirements.txt
-├── .env.example
+├── .env
 └── README.md
 ```
 
