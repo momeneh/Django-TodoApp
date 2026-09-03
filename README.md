@@ -353,7 +353,6 @@ This project was developed to gain practical experience with Django backend deve
 
 Potential improvements for future versions include:
 
-* Expanded REST API functionality
 * Task priorities and categories
 * Due dates and reminders
 * Search functionality
