@@ -39,6 +39,7 @@ https://github.com/momeneh/Django-TodoApp
 * Python
 * Django
 * Django REST Framework
+* PostgreSQL
 * Django ORM
 
 ### Frontend
@@ -51,6 +52,7 @@ https://github.com/momeneh/Django-TodoApp
 
 * Docker
 * Docker Compose
+* PostgreSQL Docker volume
 * Git
 * GitHub
 * Render
@@ -304,7 +306,18 @@ The application will be available at:
 ```text
 http://127.0.0.1:8000/
 ```
+---
 
+## 🔄 CI/CD
+
+GitHub Actions is configured to automatically run the test suite on every push and pull request.
+
+The CI pipeline verifies:
+- Python dependencies
+- Django configuration
+- PostgreSQL service
+- API tests
+  
 ---
 
 ## 🌐 Deployment
@@ -329,7 +342,7 @@ This project was developed to gain practical experience with Django backend deve
 * Authentication and authorization
 * CRUD operations
 * Form handling
-* Database integration
+* PostgreSQL database integration
 * Docker containerization
 * Environment configuration
 * Cloud deployment
@@ -341,11 +354,10 @@ This project was developed to gain practical experience with Django backend deve
 Potential improvements for future versions include:
 
 * Expanded REST API functionality
-* Pagination and filtering
 * Task priorities and categories
 * Due dates and reminders
 * Search functionality
-* Improved API authentication
+* Rate limiting
 
 ---
 
@@ -357,7 +369,7 @@ Senior Backend Developer
 
 Backend technologies:
 
-`PHP` · `Laravel` · `Python` · `Django` · `REST APIs` · `MySQL` · `Docker`
+`PHP` · `Laravel` · `Python` · `Django` · `REST APIs` · `MySQL` · `Docker` . `PostgreSQL`
 
 ### Connect
 
