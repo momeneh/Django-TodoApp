@@ -18,7 +18,7 @@ jobs:
     - name: set up docker compose  
       run: docker compose up -d
     - name: Run tests
-      run: docker exec django_app sh -c "flake8 && pytest ." 
+      run: docker exec backend sh -c "flake8 && pytest ." 
    
   #secrets should be described in github/repo/setting/secrets/action
   # Deploy:

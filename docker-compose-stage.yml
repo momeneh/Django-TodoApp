@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
  
-  web:
+  backend:
     build: .
-    container_name: django_app
+    container_name: backend
     # command:    gunicorn core.wsgi --bind 0.0.0.0:8000 #&& python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput
     command: >
       sh -c "python manage.py collectstatic --noinput;
@@ -31,7 +31,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-     - web  
+     - backend  
 
 volumes:
   static_volume:
